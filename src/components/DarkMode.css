@@ -1,0 +1,57 @@
+body {
+  background-color: white;
+  color: black;
+  transition: all 0.4s ease;
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+.dark-mode .card {
+  background: #1e1e1e;
+  color: white;
+}
+
+.container {
+  margin-top: -10px;
+  margin-left: 1200px;
+}
+
+.container button {
+  margin-top: -35px;
+  margin-left: 250px;
+  /* padding: 10px 20px; */
+  /* margin: 0; */
+  position: absolute;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  /* background:blue; */
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button{
+    margin-top: -80px;
+}
+
+button:hover {
+  background: blue;
+}
+body {
+  background-color: white;
+  color: black;
+  transition: all 0.4s ease;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+/* optional */
+.dark-mode .card {
+  background: #1e1e1e;
+  color: white;
+}

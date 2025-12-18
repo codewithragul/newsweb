@@ -1,0 +1,5 @@
+https://newsdata.io/api/1/latest?apikey=pub_9ee8459079484cac8aea5830aa4da14d&q=business
+https://newsdata.io/api/1/latest?apikey=pub_9ee8459079484cac8aea5830aa4da14d&q=world
+https://newsdata.io/api/1/latest?apikey=pub_9ee8459079484cac8aea5830aa4da14d&q=headlines
+https://newsdata.io/api/1/latest?apikey=pub_9ee8459079484cac8aea5830aa4da14d&q=Entertainment
+https://newsdata.io/api/1/latest?apikey=pub_9ee8459079484cac8aea5830aa4da14d&q=sports
