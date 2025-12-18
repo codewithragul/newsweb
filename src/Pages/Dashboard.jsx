@@ -16,14 +16,21 @@ function Dashboard() {
 
   return (
     <>
-      <div className="mt-10 ml-20 mb-10">
-        <h1 className="text-4xl font-bold text-blue-600 ml-105 mt-20 text-8xl">Headlines News </h1>
-      </div>
+        <h1 className="text-8xl ml-35 font-bold text-blue-600 mt-30 mb-10 text-center">
+        Headlines News
+      </h1>
 
-      <div className="flex flex-wrap justify-center gap-8 ml-20 mb-10 mt-25">
-        {newsData.map((item, index) => (
-          <div key={index} className="flex-shrink-0 w-full sm:w-1/2 lg:w-1/4">
-            <NewsCard news={item} />
+      <div className="flex flex-wrap justify-center gap-8 ml-30 px-10">
+        {articles.map((news, index) => (
+          <div key={index} className="w-[30%] min-w-[320px]">
+            <NewsCard news={{
+                 title: news.title,
+               description: news.description,
+                source: { name: news.source_id },
+                urlToImage: news.image_url,
+                publishedAt: news.pubDate,
+                url: news.link,
+              }} />
           </div>
         ))}
       </div>

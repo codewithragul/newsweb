@@ -15,14 +15,21 @@ function World() {
 
   return (
     <>
-      <h1 className="text-8xl ml-35 font-bold text-blue-600 mt-30 mb-10 text-center">
+        <h1 className="text-8xl ml-35 font-bold text-blue-600 mt-30 mb-10 text-center">
         World News
       </h1>
 
       <div className="flex flex-wrap justify-center gap-8 ml-30 px-10">
         {articles.map((news, index) => (
           <div key={index} className="w-[30%] min-w-[320px]">
-            <NewsCard news={news} />
+            <NewsCard news={{
+                 title: news.title,
+               description: news.description,
+                source: { name: news.source_id },
+                urlToImage: news.image_url,
+                publishedAt: news.pubDate,
+                url: news.link,
+              }} />
           </div>
         ))}
       </div>

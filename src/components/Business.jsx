@@ -23,7 +23,14 @@ function Business() {
       <div className="flex flex-wrap justify-center gap-8 ml-30 px-10">
         {articles.map((news, index) => (
           <div key={index} className="w-[30%] min-w-[320px]">
-            <NewsCard news={news} />
+            <NewsCard news={{
+                 title: news.title,
+               description: news.description,
+                source: { name: news.source_id },
+                urlToImage: news.image_url,
+                publishedAt: news.pubDate,
+                url: news.link,
+              }} />
           </div>
         ))}
       </div>
