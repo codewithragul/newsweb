@@ -2,16 +2,16 @@ import React, { useEffect, useState } from 'react'
 import NewsCard from '../components/NewsCard';
 
 function World() {
- const [articles, setArticles] = useState([]);
-
-  useEffect(() => {
-    fetch(
-              "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=d075182b25e64c5dbc996b9d284543cf"
-
-    )
-      .then((res) => res.json())
-      .then((data) => setArticles(data.articles || []));
-  }, []);
+  const [articles, setArticles] = useState([]);
+ 
+   useEffect(() => {
+   fetch(
+     "https://newsdata.io/api/1/latest?apikey=pub_9ee8459079484cac8aea5830aa4da14d&q=world"
+ )
+     .then(res => res.json())
+     .then(data => setArticles(data.results || []))
+     .catch(err => console.error("Error fetching sports news:", err));
+ }, []);
 
   return (
     <>

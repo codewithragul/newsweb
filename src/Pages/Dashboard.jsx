@@ -3,23 +3,16 @@ import NewsCard from '../components/NewsCard'
 import axios from 'axios';
 
 function Dashboard() {
-    const [newsData, setNewsData] = useState([]);
-    
-  useEffect(() => {
-    fetchAllData();
-  }, []);
+ const [articles, setArticles] = useState([]);
 
-  const fetchAllData = async () => {
-    try {
-      const generalResponse = await axios.get(
-        "https://newsapi.org/v2/top-headlines?country=us&apiKey=d075182b25e64c5dbc996b9d284543cf"
-      );
-      setNewsData(generalResponse.data.articles);
-// https://newsapi.org/v2/top-headlines?country=us&apiKey=d075182b25e64c5dbc996b9d284543cf
-    } catch (error) {
-      console.error("Error fetching news:", error);
-    }
-  };
+  useEffect(() => {
+  fetch(
+    "https://newsdata.io/api/1/latest?apikey=pub_9ee8459079484cac8aea5830aa4da14d&q=headlines"
+)
+    .then(res => res.json())
+    .then(data => setArticles(data.results || []))
+    .catch(err => console.error("Error fetching sports news:", err));
+}, []);
 
   return (
     <>
